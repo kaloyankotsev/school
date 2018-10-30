@@ -1,0 +1,130 @@
+int xpos = 0;
+int ypos = 0;
+int xpos2 = 0;
+int ypos2 = 0;
+int xpos3 = 0;
+int ypos3 = 0;
+int xpos4 = 0;
+int ypos4 = 0;
+int xpos5 = 0;
+int ypos5 = 0;
+void setup(){
+  size(700,700);
+ 
+  
+  
+}
+ 
+void draw(){
+  background(200,200,123);
+ 
+  line(300,700,300,700);
+ 
+  
+  
+  if (keyPressed && keyCode == LEFT){
+    xpos--;
+  }else if(keyPressed && keyCode == RIGHT){
+  xpos++;
+  }
+  if (keyPressed && keyCode == DOWN){
+    ypos++;
+  }else if(keyPressed && keyCode == UP){
+    ypos--;
+  }
+  //makeFigure(150,400);
+  //makeFigure(300,200);
+  drawNigga(xpos,ypos);
+  
+if (keyPressed && key == 'a'){
+    xpos2--;
+  }else if(keyPressed && key == 'd'){
+  xpos2++;
+  }
+  if (keyPressed && key == 'w'){
+    ypos2++;
+  }else if(keyPressed && key =='s'){
+    ypos2--;
+  }
+  drawNigga(xpos2,ypos2);
+  drawNigga(mouseX,mouseY);
+  
+  if (keyPressed && key == 'f'){
+    xpos3--;
+  }else if(keyPressed && key == 'j'){
+  xpos3++;
+  }
+  if (keyPressed && key == 'y'){
+    ypos3++;
+  }else if(keyPressed && key =='h'){
+    ypos3--;
+  }
+  
+  drawNigga(xpos3,ypos3);
+  
+    if (keyPressed && key == '2'){
+    xpos4--;
+  }else if(keyPressed && key == '5'){
+  xpos4++;
+  }
+  if (keyPressed && key == '1'){
+    ypos4++;
+  }else if(keyPressed && key =='3'){
+    ypos4--;
+  }
+  
+  drawNigga(xpos4,ypos4);
+  
+    if (keyPressed && key == 'o'){
+    xpos5--;
+  }else if(keyPressed && key == 'l'){
+  xpos5++;
+  }
+  if (keyPressed && key == ';'){
+    ypos5++;
+  }else if(keyPressed && key =='k'){
+    ypos5--;
+  }
+  
+  drawBabyNigga(xpos5,ypos5);
+  
+  
+
+}
+void drawNigga(int x,int y){
+     rectMode(CENTER);
+     fill(#5A1403);
+     rect(100+x,100+y,20,100);
+     ellipse(100+x,30+y,100,50);
+     fill(#F7F3F2);
+     ellipse(81+x,30+y,16,32);
+     ellipse(119+x,30+y,16,32);
+     line(100+x,150+y,120+x,140+y);
+     line(100+x,150+y,140+x,120+y);
+    }
+void drawBabyNigga(int x,int y){
+     rectMode(CENTER);
+     fill(#5A1403);
+     rect(100+x,100+y,20,50);
+     ellipse(100+x,50+y,100,50);
+     fill(#F7F3F2);
+     ellipse(81+x,50+y,16,32);
+     ellipse(119+x,50+y,16,32);
+     line(100+x,120+y,120+x,140+y);
+     line(100+x,120+y,140+x,120+y);
+}
+
+
+ 
+
+    
+    //int doubleNum(int num){
+    //return(2*num);
+    
+    //int a = doubleNum(10);
+    //int b = doubleNum(132);
+    //println("a = " + a);
+    //println("b = " + b);
+    //}
+    
+  
