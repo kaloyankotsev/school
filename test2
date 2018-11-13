@@ -1,0 +1,43 @@
+int x=5;
+int y=6;
+int speedx=10;
+int speedy=10;
+
+
+void setup(){
+  size(500,500);
+}
+void draw(){
+   background(0);
+  ellipse(x,y,50,50);
+  fill(255);
+ 
+   if (keyPressed && key == 'a' || keyPressed && key == 'A'){
+
+    x--;
+
+  }else if(keyPressed && key == 'd' || (keyPressed && key == 'D')){
+
+  x++;
+
+  }
+
+  if (keyPressed && key == 'w' || keyPressed && key == 'W'){
+
+    y++;
+
+  }else if( keyPressed && key == 's' || keyPressed && key == 'S'){
+
+    y--;
+  }
+    if( keyPressed && keyCode == '1'){
+      x=x + 20;
+      y=y + 20;
+    }else if(keyPressed && key == '2' ){
+      x=x - 20;
+      y=y - 20;
+    }
+  
+
+
+}
