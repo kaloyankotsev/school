@@ -1,0 +1,171 @@
+int xpos = 0;
+
+int ypos = 0;
+int hpos = 0;
+int wpos=0;
+
+int ypos2=200;
+int yDir=6;
+
+
+int xpos2=200;
+int xDir2=2;
+int Humany=100;
+int Humanx=100;
+int Humanw=100;
+int humanh=100;
+
+ 
+ 
+
+
+  
+
+
+void setup(){
+
+  size(700,700);
+   smooth(50);
+  stroke(0);
+  fill(0,255,0);
+
+
+
+ 
+
+  
+
+  
+
+}
+
+ 
+
+void draw(){
+
+  background(200,200,123);
+  fill(random(255),random(255),random(255));
+   ellipse(600, ypos2, 100, 100);
+  ypos2=ypos2+yDir;
+  if (ypos2>height+1 || ypos2<1) {
+    yDir=-yDir;
+  }
+  
+   ellipse(xpos2, 200, 40, 40);
+  xpos2=xpos2+xDir2;
+  if (xpos2>width-20 || xpos2<20)
+  {
+    xDir2=-xDir2;
+ 
+  }
+ 
+
+  
+
+ 
+
+  
+
+  
+
+  if (keyPressed && keyCode == LEFT){
+
+    xpos--;
+
+  }else if(keyPressed && keyCode == RIGHT){
+
+  xpos++;
+
+  }
+
+  if (keyPressed && keyCode == DOWN){
+
+    ypos++;
+
+  }else if(keyPressed && keyCode == UP){
+
+    ypos--;
+
+  }
+
+  //makeFigure(150,400);
+
+  //makeFigure(300,200);
+
+  drawHuman(xpos,ypos,hpos,wpos);
+     boolean collisionRIGHT = (Humanx + humanh) < xpos && (Humanx > wpos);
+println(collisionRIGHT);
+if(collisionRIGHT){
+  background(0,0,0);
+  }
+
+  
+
+//if (keyPressed && key == 'a'){
+
+    //Human2Xpos2--;
+
+  //}else if(keyPressed && key == 'd'){
+
+  //Human2Xpos2++;
+
+  //}
+
+  //if (keyPressed && key == 's'){
+
+    //Human2Ypos2++;
+
+  //}else if(keyPressed && key =='w'){
+
+   // Human2Ypos2--;
+
+ // }
+
+
+}
+
+void drawHuman(int x,int y,int w, int h){
+
+     rectMode(CENTER);
+
+     fill(#5A1403);
+
+     rect(100+x,100+y,30+w,100+h);
+
+     ellipse(100+x,30+y,100,50);
+
+     fill(#F7F3F2);
+
+     ellipse(81+x,30+y,16+w,32+h);
+
+     ellipse(119+x,30+y,16+w,32+h);
+
+     line(100+x,150+y,140+x,170+y);
+     //krak
+     line(100+x,150+y,70+x,170+y);
+     //krak
+     line(115+x,80+y,150+x,100+y);
+     //ruka
+     line(85+x,80+y,150+x,100+y);
+     //ruka
+     rect(150+x,100+y,20,10);
+     //trrrrrr
+     rect(160+x,100+y,13,5);
+     //trrrrr
+        
+  
+  
+    }
+ 
+    
+   
+    
+
+
+
+
+
+
+
+
+ 
