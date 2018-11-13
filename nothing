@@ -1,0 +1,44 @@
+int xpos=5;
+int ypos=5;
+int xpos2=5;
+int ypos2=5;
+void setup(){
+  size(600,600);
+  background(255,0,0);
+}
+void draw(){
+ rect (xpos,ypos,100,100);
+  if(keyPressed && key=='d'){
+    xpos++;
+  }else if(keyPressed && key =='a'){
+    xpos--;
+  }
+  if (keyPressed && key == 's'){
+    ypos++;
+  }else if (keyPressed && key =='w'){
+  ypos--;
+  }
+  boolean collision = (xpos + ypos2) > xpos && (ypos2< xpos);
+println(collision);
+if(collision){
+  background(0,0,0);
+}
+
+ }
+   
+
+ rect(xpos2,ypos2,100,100);
+    if (keyPressed && key == 'h'){
+    xpos2++;
+  }else if(keyPressed && key =='f'){
+  xpos2--;
+  }
+  if (keyPressed && key == 'g'){
+  ypos2++;
+  }else if(keyPressed && key == 't'){
+    ypos2--;
+  }
+   
+  
+
+  
