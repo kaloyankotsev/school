@@ -1,0 +1,43 @@
+float rectX1 = 250;
+float rectX2 =666.5;
+float rectY = 250 ;
+ float velY =8;
+float bolaX;
+float bolaY;
+ 
+void setup(){
+  size(1000,500);
+  }
+void draw(){
+  background (#FF6F00);
+ 
+ 
+  rectY=rectY+velY;
+ 
+  rect(rectX1,rectY,50,150);
+ 
+  rect(rectX2,rectY,50,150);
+ 
+  if ((rectY<0)||(rectY>350)){
+    velY=-velY;
+  }
+ 
+ 
+ 
+ 
+  ellipse(bolaX, bolaY, 30, 30);
+ 
+  float targetX = mouseX;
+  float dx = targetX - bolaX;
+  if(abs(dx) > 1) {
+    bolaX += dx;
+  }
+ 
+  float targetY = mouseY;
+  float dy = targetY - bolaY;
+  if(abs(dy) > 1) {
+    bolaY += dy;
+  }
+ 
+ 
+}
